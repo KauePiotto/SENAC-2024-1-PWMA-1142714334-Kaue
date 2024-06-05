@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos/Login.css">
+</head>
+
+<body>
+    <!-----------------------------------------------------------------
+*                        Área de cabeçalho                        *
+------------------------------------------------------------------>
+    <div class="foto-logo">
+        <img src="Fotos/logosite.png">
+    </div>
+    <header class="header-Login">
+        <nav>
+            <h1 class="Titulo">Saúde e Bem Estar</h1>
+        </nav>
+    </header>
+    <!----------------------------------------------------------------
+*                         Área de main                           *
+----------------------------------------------------------------->
+    <div class="login-container">
+        <form class="login-form" id="loginForm" onsubmit="return handleLogin(event)">
+            <h2>Login</h2>
+            <hr>
+            <div class="form-grupo">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-grupo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <a href="MenuUsuario.html"></a><button onclick="entrar()" >Entrar</button>
+            <ul class="opcoes">
+                <li>
+                    <a class="esquecisenha" href="Esqueciasenha.html">Esqueceu a senha?</a>
+                </li>
+                <li>
+                    <a class="cadastrar" href="Cadastrar.html">Cadastar-se</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!--------------------------------------------------------------*
+    *                    Área de rodapé                             *
+    *--------------------------------------------------------------->
+    <div class="footer">
+        <p>&copy; 2024 Fitness. Todos os direitos reservados.</p>
+    </div>
+    <script src="JavaScript/Login.js"></script>
+</body>
+</html>

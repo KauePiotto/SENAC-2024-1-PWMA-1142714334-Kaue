@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="estilos/Cadastrar.css">
+</head>
+<body>
+<!-----------------------------------------------------------------
+*                        Área de cabeçalho                        *
+------------------------------------------------------------------>
+    <div class="foto-logo">
+        <img src="Fotos/logosite.png">
+    </div>
+    <header class="header-cadastrar">
+        <nav>
+            <h1 class="Titulo">Saúde e Bem Estar</h1>
+        </nav>
+    </header>
+<!-----------------------------------------------------------------
+*                        Área do main                                *
+------------------------------------------------------------------>
+    <div class="cadastro-container">
+        <form class="cadastro-form" id="cadastroform" onsubmit="return validateForm()">
+            <h2>Cadastro</h2>
+            <hr>
+            <div class="form-grupo">
+                <label for="primeironome">Nome</label>
+                <input type="text" name="PrimeiroNome" id="PrimeiroNome" required>
+            </div>
+            <div class="form-grupo">
+                <label for="sobrenone">Sobrenome</label>
+                <input type="text" name="Sobrenome" id="Sobrenome" required>
+            </div>
+            <div class="form-grupo">
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email" required>
+            </div>
+            <div class="form-grupo">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required>
+            </div>
+            <div class="form-grupo">
+                <label for="peso">Peso(kg)</label>
+                <input type="number" name="peso" id="peso" required>
+            </div>
+            <div class="form-grupo">
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" id="idade" required>
+            </div>
+            <div class="form-grupo">
+                <label for="altura">Altura(cm)</label>
+                <input type="number" name="altura" id="altura" required>
+            </div>
+            <div class="form-grupo">
+                <label for="objetivo">Qual seu obejtivo?</label>
+                <input type="text" name="objetivo" id="objetivo" required>
+            </div>
+            <div class="form-grupo">
+                <label for="medicamento">Toma medicamento?</label>
+                <select name="medicamento" id="medicamento" onchange="toggleMedicamento()">
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </div>
+            <div class="form-group detalhesmedicamentos">
+                <label for="detalhesmedicamentos">Se sim, quais?</label>
+                <input type="text" id="detalhesmedicamentos" name="detalhesmedicamentos">
+            </div>
+            <div class="form-grupo">
+                <label for="problemamed">Tem algum problema médico?</label>
+                <select name="problemamed" id="problemamed" onchange="toggleproblemamed()">
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </div>
+            <div class="form-group detalhesprob">
+                <label for="detalhesprob">Se sim, quais?</label>
+                <input type="text" id="detalhesprob" name="detalhesprob">
+            </div>
+            <button type="submit">Cadastrar</button>
+            <ul class="jacadastro">
+                <li>
+                    <a class="login" href="Login.html">Ja tenho conta</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!--------------------------------------------------------------*
+    *                    Área de rodapé                             *
+    *--------------------------------------------------------------->
+    <div class="footer">
+        <p>&copy; 2024 Fitness. Todos os direitos reservados.</p>
+    </div>
+    <script src="JavaScript/index.js"></script>
+</body>
+</html>
